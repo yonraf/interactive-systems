@@ -1,20 +1,38 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
 
 import '../../App.css'
 import BackgroundImage from '../../assets/images/bg.png'
 
 export default function LandingPage() {
     return (
-        <header style={ HeaderStyle }>
+        <header style={HeaderStyle}>
+            <Navbar></Navbar>
             <h1 className="main-title text-center">مرحبا جميعا</h1>
-            <p className="main-para text-center">جبنه</p>
-            <div className="buttons text-center">
-                <Link to="/login">
-                    <button className="primary-button">log in</button>
+            <div style={{ textAlign: "center" }}>
+                <form action="/" method="get">
+                    <input
+                        type="text"
+                        id="header-search"
+                        placeholder="Where you wanna live?"
+                        name="search"
+                    />
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div className="grid" style={{ height: "100px", textAlign: "center" }}>
+                <Link to="/">
+                    <button className="properties">Property 1</button>
                 </Link>
-                <Link to="/register">
-                    <button className="primary-button" id="reg_btn"><span>register </span></button>
+                <Link to="/">
+                    <button className="properties">Property 2</button>
+                </Link>
+                <Link to="/">
+                    <button className="properties">Property 3</button>
+                </Link>
+                <Link to="/">
+                    <button className="properties">Property 4</button>
                 </Link>
             </div>
         </header>
