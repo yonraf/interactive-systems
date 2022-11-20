@@ -6,6 +6,9 @@ import LoginPage from './components/pages/LoginPage'
 import RegisterPage from './components/pages/RegisterPage'
 import ForgetPasswordPage from './components/pages/ForgetPasswordPage'
 import HomePage from './components/pages/HomePage'
+import BrowsePage from './components/pages/BrowsePage'
+import PropertyPage from './components/pages/InspectPage'
+import SupportPage from './components/pages/SupportPage'
 
 import './App.css'
 
@@ -19,6 +22,9 @@ export default function App() {
                     <Route path="/register" component={ RegisterPage } />
                     <Route path="/forget-password" component={ ForgetPasswordPage } />
                     <Route path="/home" component={ HomePage } />
+                    <Route path="/browse" component={ BrowsePage } />
+                    <Route path="/support" component={ SupportPage } />
+                    <Route path="/property" component={ PropertyPage } />
                 </Switch>
             </div>
         </Router>

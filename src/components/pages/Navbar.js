@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <div style={{ display: "flex", backgroundColor: "white", padding: "15px" }}>
-            <Link to="/" className='navbarlink'>Rent a property</Link>
+        <div style={{ display: "flex", backgroundColor: "orange", padding: "15px" }}>
+            <Link to="/browse" className='navbarlink'>Rent a property</Link>
             <Link to="/login" className='navbarlink'>Login</Link>
             <Link to="/register" className='navbarlink'>Create user</Link>
-            <Link to="/" className='navbarlink'>Support</Link>
+            <Link to="/support" className='navbarlink'>Support</Link>
         </div>
     );
 }
