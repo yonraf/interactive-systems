@@ -8,7 +8,7 @@ export default function BrowsePage() {
         <header>
             <Navbar></Navbar>
             <div style={{ textAlign: "center" }}>
-                <form action="/" method="get">
+                <form action="/browse" method="get">
                     <input
                         type="text"
                         id="header-search"

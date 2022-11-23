@@ -14,7 +14,6 @@ import "./App.css";
 import Listing from "./components/pages/Listing";
 
 export default function App() {
-          <Route path="/listing" component={Listing} />
     return (
         <Router>
             <div>
@@ -27,6 +26,7 @@ export default function App() {
                     <Route path="/browse" component={ BrowsePage } />
                     <Route path="/support" component={ SupportPage } />
                     <Route path="/property" component={ PropertyPage } />
+                    <Route path="/listing" component={Listing} />
                 </Switch>
             </div>
         </Router>

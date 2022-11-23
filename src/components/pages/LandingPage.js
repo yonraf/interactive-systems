@@ -9,9 +9,9 @@ export default function LandingPage() {
     return (
         <header style={HeaderStyle}>
             <Navbar></Navbar>
-            <h1 className="main-title text-center">مرحبا جميعا</h1>
+            <h1 className="main-title text-center">Welcome to Expressbolig</h1>
             <div style={{ textAlign: "center" }}>
-                <form action="/" method="get">
+                <form action="/browse" method="get">
                     <input
                         type="text"
                         id="header-search"
@@ -22,16 +22,16 @@ export default function LandingPage() {
                 </form>
             </div>
             <div className="grid" style={{ height: "100px", textAlign: "center" }}>
-                <Link to="/">
+                <Link to="/listing">
                     <button className="properties">Property 1</button>
                 </Link>
-                <Link to="/">
+                <Link to="/listing">
                     <button className="properties">Property 2</button>
                 </Link>
-                <Link to="/">
+                <Link to="/listing">
                     <button className="properties">Property 3</button>
                 </Link>
-                <Link to="/">
+                <Link to="/listing">
                     <button className="properties">Property 4</button>
                 </Link>
             </div>

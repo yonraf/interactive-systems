@@ -1,6 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
-import { Widget, addResponseMessage } from "react-chat-widget";
+import { Widget } from "react-chat-widget";
 
 import logo from "../../assets/images/bg.png";
 import "react-chat-widget/lib/styles.css";
@@ -9,13 +8,6 @@ import "../../gabriscss.css";
 import Navbar from "./Navbar";
 
 export default function Listing() {
-  useEffect(() => {
-    addResponseMessage("hello mai frend i hav hause");
-  }, []);
-
-  const handleNewUserMessage = (newMessage) => {
-    console.log(`New message incoming! ${newMessage}`);
-  };
 
   return (
     <div>
@@ -53,7 +45,6 @@ export default function Listing() {
 
       <div className="App">
         <Widget
-          handleNewUserMessage={handleNewUserMessage}
           profileAvatar={logo}
           title="Chat with the landlord"
           subtitle="send him a message"

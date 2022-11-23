@@ -1,6 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
 import { Widget, addResponseMessage } from "react-chat-widget";
+import NavbarLoggedIn from './NavbarLoggedIn'
+import { Link } from 'react-router-dom'
+
 
 import logo from "../../assets/images/bg.png";
 import "react-chat-widget/lib/styles.css";
@@ -9,15 +12,12 @@ import "../../gabriscss.css";
 
 export default function HomePage() {
   useEffect(() => {
-    addResponseMessage("hello mai frend i hav hause");
+    addResponseMessage("hello, could i possibly come look at you beatiful house tomorrow?");
   }, []);
-
-  const handleNewUserMessage = (newMessage) => {
-    console.log(`New message incoming! ${newMessage}`);
-  };
 
   return (
     <div>
+      <NavbarLoggedIn></NavbarLoggedIn>
       <div className="split">
         <div className="box2">
           <div className="accountpic">image</div>
@@ -39,35 +39,33 @@ export default function HomePage() {
           </div> */}
         </div>
         <div className="box1">
-          <div>jeff the landlord</div>
-          <div
-            className="grid"
-            style={{ height: "100px", textAlign: "center" }}
-          >
-            <button className="properties">Property 1</button>
-            <button className="properties">Property 2</button>
-            <button className="properties">Property 3</button>
-            <button className="properties">Property 4</button>
+          <div>My properties</div>
+          <div className="grid" style={{ height: "100px", textAlign: "center" }}>
+            <Link to="/listing">
+              <button className="properties">Property 1</button>
+            </Link>
+            <Link to="/listing">
+              <button className="properties">Property 2</button>
+            </Link>
+            <Link to="/listing">
+              <button className="properties">Property 3</button>
+            </Link>
+            <Link to="/listing">
+              <button className="properties">Property 4</button>
+            </Link>
           </div>
         </div>
         <div className="box3">
           <form>
             <input type="button" text="name" />
-          </form>
-          <form>
             <input type="button" placeholder="number" />
-          </form>
-          <form>
             <input type="button" placeholder="aaa" />
-          </form>
-          <form>
             <input type="button" placeholder="jeff" />
           </form>
         </div>
       </div>
       <div className="App">
         <Widget
-          handleNewUserMessage={handleNewUserMessage}
           profileAvatar={logo}
           title="Chat with the landlord"
           subtitle="send him a message"
