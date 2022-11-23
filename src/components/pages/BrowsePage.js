@@ -27,19 +27,21 @@ export default function BrowsePage() {
 
             </div>
             <div style={{ width: "100%", display: "flex"}}>
-                <div style={{ textAlign: "left", width: "20%", paddingTop: "10vh", paddingLeft: "2vh"  }}>
-                    <p style={{ fontSize: "20px", paddingLeft: "10vh" }}>House type</p>
-                    <input type="checkbox" value="villa" />Villa
-                    <input type="checkbox" value="house" />House
-                    <input type="checkbox" value="apartment" />Apartment
-                    <input type="checkbox" value="studio" />Studio
-                    <input type="checkbox" value="rooms" />Rooms
+                <div style={{ textAlign: "left", width: "20%", paddingTop: "10vh", paddingLeft: "2vh"}}>
+                <p style={{ fontSize: "20px", paddingLeft: "10vh" }}>House type</p>
+                    <div style = {{ width: "18vh"}}>
+                    <input type="checkbox" value="villa" style={{textAlign: "center", width: "7vh"}}/>Villa
+                    <input type="checkbox" value="house" style={{textAlign: "center", width: "7vh"}}/>House
+                    <input type="checkbox" value="apartment" style={{textAlign: "center", width: "7vh"}}/>Apartment
+                    <input type="checkbox" value="studio" style={{textAlign: "center", width: "7vh"}}/>Studio
+                    <input type="checkbox" value="rooms" style={{textAlign: "center", width: "7vh"}}/>Rooms
                     <p style={{ fontSize: "20px", paddingLeft: "10vh", paddingTop: "5vh" }}>Facilities</p>
-                    <input type="checkbox" value="pool" />Pool
-                    <input type="checkbox" value="garage" />Garage
-                    <input type="checkbox" value="garden" />Garden
-                    <input type="checkbox" value="balcony" />Balcony
-                    <input type="checkbox" value="furnished" />Furnished
+                    <input type="checkbox" value="pool" style={{textAlign: "center", width: "7vh"}}/>Pool
+                    <input type="checkbox" value="garage" style={{textAlign: "center", width: "7vh"}}/>Garage
+                    <input type="checkbox" value="garden" style={{textAlign: "center", width: "7vh"}}/>Garden
+                    <input type="checkbox" value="balcony" style={{textAlign: "center", width: "7vh"}}/>Balcony
+                    <input type="checkbox" value="furnished" style={{textAlign: "center", width: "7vh"}} />Furnished
+                    </div>
                 </div>
                 <div className="grid" style={{ textAlign: "left", width: "80%" }}>
                     <Link to="/">
