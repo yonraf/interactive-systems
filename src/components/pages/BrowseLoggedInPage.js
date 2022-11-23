@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from './Navbar'
+import NavbarLoggedIn from './NavbarLoggedIn'
 
 
 export default function BrowsePage() {
     return (
         <header>
-            <Navbar></Navbar>
+            <NavbarLoggedIn></NavbarLoggedIn>
             <div style={{ textAlign: "center" }}>
                 <form action="/browse" method="get">
                     <input

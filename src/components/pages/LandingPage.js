@@ -23,16 +23,16 @@ export default function LandingPage() {
             </div>
             <div className="grid" style={{ height: "100px", textAlign: "center" }}>
                 <Link to="/listing">
-                    <button className="properties">Property 1</button>
+                    <button className="properties">City 1</button>
                 </Link>
                 <Link to="/listing">
-                    <button className="properties">Property 2</button>
+                    <button className="properties">City 2</button>
                 </Link>
                 <Link to="/listing">
-                    <button className="properties">Property 3</button>
+                    <button className="properties">City 3</button>
                 </Link>
                 <Link to="/listing">
-                    <button className="properties">Property 4</button>
+                    <button className="properties">City 4</button>
                 </Link>
             </div>
         </header>

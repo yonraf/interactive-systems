@@ -1,20 +1,12 @@
 import React from "react";
-import { useEffect } from "react";
-import { Widget, addResponseMessage } from "react-chat-widget";
 import NavbarLoggedIn from './NavbarLoggedIn'
 import { Link } from 'react-router-dom'
 
-
-import logo from "../../assets/images/bg.png";
 import "react-chat-widget/lib/styles.css";
 import "../../App.css";
 import "../../gabriscss.css";
 
 export default function HomePage() {
-  useEffect(() => {
-    addResponseMessage("hello, could i possibly come look at you beatiful house tomorrow?");
-  }, []);
-
   return (
     <div>
       <NavbarLoggedIn></NavbarLoggedIn>
@@ -22,16 +14,10 @@ export default function HomePage() {
         <div className="box2">
           <div className="accountpic">image</div>
           <form>
-            <input type="text" placeholder="name" name="search" />
-          </form>
-          <form>
-            <input type="text" placeholder="number" name="search" />
-          </form>
-          <form>
-            <input type="text" placeholder="aaa" name="search" />
-          </form>
-          <form>
-            <input type="text" placeholder="jeff" name="search" />
+            <input type="text" placeholder="name" name="search"/>
+            <input type="text" placeholder="number" name="search" style={{ marginTop: "2vh"}}/>
+            <input type="text" placeholder="email" name="search" style={{ marginTop: "2vh"}} />
+            <input type="text" placeholder="proffesion" name="search" style={{ marginTop: "2vh"}}/>
           </form>
           {/*           <div>
             <EditText showEditButton />
@@ -39,7 +25,7 @@ export default function HomePage() {
           </div> */}
         </div>
         <div className="box1">
-          <div>My properties</div>
+          <div>Starred properties</div>
           <div className="grid" style={{ height: "100px", textAlign: "center" }}>
             <Link to="/listing">
               <button className="properties">Property 1</button>
@@ -59,18 +45,12 @@ export default function HomePage() {
           <form>
             <input type="button" text="name" />
             <input type="button" placeholder="number" />
-            <input type="button" placeholder="aaa" />
-            <input type="button" placeholder="jeff" />
+            <input type="button" placeholder="email" />
+            <input type="button" placeholder="proffesion" />
           </form>
         </div>
       </div>
-      <div className="App">
-        <Widget
-          profileAvatar={logo}
-          title="Chat with the landlord"
-          subtitle="send him a message"
-        />
-      </div>
+      
     </div>
   );
 }
