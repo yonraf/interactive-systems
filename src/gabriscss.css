@@ -1,0 +1,62 @@
+body {
+    margin: 0 auto
+}
+
+.split{
+    flex-direction: row;
+    display: flex;
+  }
+
+.box1 {
+  margin: 40px;
+  width: 70%; 
+  flex-direction: column;
+  display: flex;
+  }
+
+.box2 {
+  margin: 20px;
+  margin-top: 40px;
+  width: 30%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  }
+
+.box3{
+  width: 30%;
+  margin: 20px;
+  margin-top: 40px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.box22{
+  margin-top: 20px;
+  background-color: gray;
+}
+
+.placehold{
+  content: url(https://pbs.twimg.com/media/D8Dp0c5WkAAkvME.jpg);
+  margin-bottom: 20px;
+}
+
+.profilepic{
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+  content: url(https://i.pinimg.com/236x/a8/b4/cd/a8b4cd529a79489f5c6699980736f40f.jpg);
+}
+
+.accountpic{  
+  width: 250px;
+  height: 250px;
+  content: url(https://img.wattpad.com/9011a30600da994faed4a9bdb675cf9ddddfde11/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f435549556f4f5a476469594632513d3d2d3738373336363839392e313563373266666530343563303736333132363730343331343534342e706e67?s=fit&w=720&h=720);
+}
+
+
+.profiledesc{
+  margin-top: 40px;
+
+}
