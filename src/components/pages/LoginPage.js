@@ -22,7 +22,7 @@ export default function SignInPage() {
           <input type="password" name="password" required />
         </p>
         <p>
-          <button id="sub_btn" type="submit">
+          <button id="submit" type="submit">
             Login
           </button>
         </p>

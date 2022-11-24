@@ -7,7 +7,7 @@ const Navbar = () => {
         <div style={{ display: "flex", backgroundColor: "#5aad70", padding: "15px" }}>
         <div>
             <Link to="/browse" className='navbarlink'>Rent a property</Link>
-            <Link to="/login" className='navbarlink'>Login</Link>
+            <Link to="/login" className='navbarlink' id='Login'>Login</Link>
             <Link to="/register" className='navbarlink'>Create user</Link>
             <Link to="/support" className='navbarlink'>Support</Link>
         </div>

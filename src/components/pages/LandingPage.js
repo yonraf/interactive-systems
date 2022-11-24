@@ -9,7 +9,7 @@ export default function LandingPage() {
     return (
         <header style={HeaderStyle}>
             <Navbar></Navbar>
-            <h1 className="main-title text-center">Welcome to Expressbolig</h1>
+            <h1 className="main-title text-center" id='frontPageTitle'>Welcome to Expressbolig</h1>
             <div style={{ textAlign: "center" }}>
                 <form action="/browse" method="get">
                     <input
