@@ -8,7 +8,6 @@ import "../../gabriscss.css";
 import Navbar from "./Navbar";
 
 export default function Listing() {
-
   return (
     <div>
       <div>
@@ -45,6 +44,7 @@ export default function Listing() {
 
       <div className="App">
         <Widget
+          id="Contact landlord"
           profileAvatar={logo}
           title="Chat with the landlord"
           subtitle="send him a message"
