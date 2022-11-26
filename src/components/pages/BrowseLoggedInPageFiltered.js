@@ -38,6 +38,7 @@ export default function BrowsePage() {
         2 rooms
         <input
           type="checkbox"
+          checked
           value="three"
           onClick={handleClick}
           style={{ textAlign: "center", width: "5vh" }}
@@ -153,7 +154,7 @@ export default function BrowsePage() {
             <button
               className="properties"
               style={{
-                visibility: isActive ? "hidden" : "",
+                visibility: isActive ? "" : "hidden",
               }}
             >
               Property 2
@@ -163,7 +164,7 @@ export default function BrowsePage() {
             <button
               className="properties"
               style={{
-                visibility: isActive ? "hidden" : "",
+                visibility: isActive ? "" : "hidden",
               }}
             >
               Property 3
@@ -173,7 +174,7 @@ export default function BrowsePage() {
             <button
               className="properties"
               style={{
-                visibility: isActive ? "hidden" : "",
+                visibility: isActive ? "" : "hidden",
               }}
             >
               Property 4
