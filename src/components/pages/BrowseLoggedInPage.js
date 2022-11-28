@@ -41,12 +41,12 @@ export default function BrowsePage() {
           value="three"
           onClick={handleClick}
           style={{ textAlign: "center", width: "5vh" }}
+          id="3_rooms"
         />{" "}
         3 rooms
         <input
           type="checkbox"
           value="four"
-          id="3_rooms"
           style={{ textAlign: "center", width: "5vh" }}
         />{" "}
         4 rooms
@@ -149,7 +149,7 @@ export default function BrowsePage() {
               Property 1
             </button>
           </Link>
-          <Link to="/listingloggedin">
+          <Link to="/listing">
             <button
               className="properties"
               style={{
@@ -159,7 +159,7 @@ export default function BrowsePage() {
               Property 2
             </button>
           </Link>
-          <Link to="/listingloggedin">
+          <Link to="/listing">
             <button
               className="properties"
               style={{
@@ -169,7 +169,7 @@ export default function BrowsePage() {
               Property 3
             </button>
           </Link>
-          <Link to="/listingloggedin">
+          <Link to="/listing">
             <button
               className="properties"
               style={{

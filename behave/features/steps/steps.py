@@ -2,7 +2,6 @@ from behave import given, when, then
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
 ## ------------------------- Public scenario methods ------------------------- ##
 
 
@@ -18,7 +17,7 @@ def step_impl(context):
     # firefox users (has to be in host machine path directory)
     # context.driver = webdriver.Firefox()
     # chrome users (uncomment next line)
-    context.driver = webdriver.Chrome("chromedriver.exe")
+    #context.driver = webdriver.Chrome("chromedriver.exe")
     context.driver.get("http://localhost:3000/")
     status = context.driver.find_element(
         By.ID, "frontPageTitle").is_displayed()
@@ -31,7 +30,7 @@ def step_impl(context, user, pwd):
     context.driver.find_element(By.NAME, "first_name").send_keys(user)
     context.driver.find_element(By.NAME, "password").send_keys(pwd)
 
-
+@given(u'the personal page is shown')
 @then(u'the personal page is shown')
 def step_impl(context):
     status = context.driver.find_element(
@@ -51,14 +50,14 @@ def step_impl(context):
 ## ------------------------- Gabris scenario methods ------------------------- ##
 
 
-@given(u'that the personal page is shown')
-def step_impl(context):
-    context.driver = webdriver.Chrome("chromedriver.exe")
-    context.driver.get("http://localhost:3000/home")
-    status = context.driver.find_element(
-        By.CLASS_NAME, "accountpic").is_displayed()
+# @given(u'that the personal page is shown')
+# def step_impl(context):
+#     context.driver = webdriver.Chrome("chromedriver.exe")
+#     context.driver.get("http://localhost:3000/home")
+#     status = context.driver.find_element(
+#         By.CLASS_NAME, "accountpic").is_displayed()
 
-    assert status is True
+#     assert status is True
 
 
 @when(u'I select house type "{id}"')
@@ -83,15 +82,13 @@ def step_impl(context):
 
 @given(u'that filtered results are shown')
 def step_impl(context):
-    context.driver = webdriver.Chrome("chromedriver.exe")
-    context.driver.get("http://localhost:3000/browse-login-filtered")
     status = context.driver.find_element(
         By.XPATH, "//*[@id='3room_apartament']").is_displayed()
 
     assert status is True
 
 
-@when(u'I click on the "Property 1"')
+@when(u'I click "Property 1"')
 def step_impl(context):
     context.driver.find_element(
         By.XPATH, "//*[@id='3room_apartament']").click()
@@ -102,12 +99,19 @@ def step_impl(context):
     context.driver.find_element(By.CLASS_NAME, "rcw-launcher").click()
 
 
-@ then(u'I type in a message "{message}"')
+@when(u'I type in a message "{message}"')
 def step_impl(context, message):
-    context.driver.find_element(
-        By.CLASS_NAME, "rcw-new-message").send_keys(message)
+    context.driver.find_element(By.CLASS_NAME, "rcw-input").send_keys(message)
 
 
-@ then(u'click the "send message" button')
+@when(u'click the "send message" button')
 def step_impl(context):
     context.driver.find_element(By.CLASS_NAME, "rcw-send").click()
+
+@then(u'a message is sent')
+def step_impl(context):
+    status = context.driver.find_element(
+        By.CLASS_NAME, "rcw-message-text").is_displayed()
+
+    assert status is True
+    

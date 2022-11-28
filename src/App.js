@@ -10,7 +10,6 @@ import BrowsePage from "./components/pages/BrowsePage";
 import PropertyPage from "./components/pages/InspectPage";
 import SupportPage from "./components/pages/SupportPage";
 import BrowseLoggedInPage from "./components/pages/BrowseLoggedInPage";
-import BrowseLoggedInPageFiltered from "./components/pages/BrowseLoggedInPageFiltered";
 
 import "./App.css";
 import Listing from "./components/pages/Listing";
@@ -30,10 +29,6 @@ export default function App() {
           <Route path="/property" component={PropertyPage} />
           <Route path="/listing" component={Listing} />
           <Route path="/browse-login" component={BrowseLoggedInPage} />
-          <Route
-            path="/browse-login-filtered"
-            component={BrowseLoggedInPageFiltered}
-          />
         </Switch>
       </div>
     </Router>

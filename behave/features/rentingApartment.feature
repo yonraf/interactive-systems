@@ -9,7 +9,7 @@ Feature: Showing interest in renting a property
         And the button "Login" is unavailable
 
     Scenario: browse properties
-        Given that the personal page is shown
+        Given the personal page is shown
         When I click the button "Rent_a_property"
         And I select house type "apartament"
         And I select room number preference "3 rooms"
@@ -17,10 +17,11 @@ Feature: Showing interest in renting a property
 
     Scenario: contact a landlord regarding a property
         Given that filtered results are shown
-        When I click on the "Property 1"
+        When I click "Property 1"
         And I click the chat icon
-        Then I type in a message "Hi, I am interested in your property"
+        And I type in a message "Hi, I am interested in your property"
         And click the "send message" button
+        Then a message is sent
 
 
 
