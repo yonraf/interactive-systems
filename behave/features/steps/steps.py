@@ -4,13 +4,11 @@ from selenium.webdriver.common.by import By
 
 ## ------------------------- Public scenario methods ------------------------- ##
 
-
 @when(u'I click the button "{id}"')
 def step_impl(context, id):
     context.driver.find_element(By.ID, id).click()
 
 ## ------------------------- Yonus scenario methods ------------------------- ##
-
 
 @given(u'that BoligExpress Homepage is shown')
 def step_impl(context):
@@ -23,7 +21,6 @@ def step_impl(context):
         By.ID, "frontPageTitle").is_displayed()
 
     assert status is True
-
 
 @when(u'I enter username "{user}" and password {pwd}')
 def step_impl(context, user, pwd):
@@ -38,7 +35,6 @@ def step_impl(context):
 
     assert status is True
 
-
 @then(u'the button "Login" is unavailable')
 def step_impl(context):
     try:
@@ -47,18 +43,8 @@ def step_impl(context):
         status = False
     assert status is False
 
+
 ## ------------------------- Gabris scenario methods ------------------------- ##
-
-
-# @given(u'that the personal page is shown')
-# def step_impl(context):
-#     context.driver = webdriver.Chrome("chromedriver.exe")
-#     context.driver.get("http://localhost:3000/home")
-#     status = context.driver.find_element(
-#         By.CLASS_NAME, "accountpic").is_displayed()
-
-#     assert status is True
-
 
 @when(u'I select house type "{id}"')
 def step_impl(context, id):
